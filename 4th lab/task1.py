@@ -8,8 +8,7 @@ def task() -> float:
         with open(filename, 'r') as file:
             data = json.load(file)
 
-        for cur_dict in data:
-            count += cur_dict['score'] * cur_dict['weight']
+        count = sum(cur_dict['score'] * cur_dict['weight'] for cur_dict in data)
 
         return round(count, 3)
 
