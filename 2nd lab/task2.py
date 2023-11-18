@@ -4,7 +4,7 @@ months = 10  # Количество месяцев, которое планир�
 increase = 0.03  # Ежемесячный рост цен
 money_pillow = 0
 
-for i in range(months):
+for _ in range(months):
     delta = spend - salary
     money_pillow += delta
     spend *= (1 + increase)
